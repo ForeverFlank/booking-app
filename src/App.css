@@ -40,12 +40,24 @@
   color: #888;
 }
 
-td {
-  width: 8vw;
+.center {
   text-align: center;
-  background-color: #323232;
 }
 
 .emptyrow {
   height: 4vw;
+}
+
+.cell {
+  width: 12vw;
+  background-color: #323232;
+}
+
+.time {
+  text-align: end;
+  vertical-align: text-bottom;
+}
+
+.timetable {
+  position: absolute;
 }
