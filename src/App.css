@@ -5,31 +5,46 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
+.grid-container {
+  display: grid;
+  column-gap: 50px;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.grid-table {
+  grid-column: 1;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.grid-input {
+  align-self: center;
+  grid-column: 2;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.dropdown {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  height: 2.4em;
+  padding: 0.6em 0.6em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+.dropdown:hover {
+  border-color: #646cff;
+}
+.dropdown:focus,
+.dropdown:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.select-time {
+  display: flex;
+  justify-content: center;
+  column-gap: 1em;
+}
+
+.colon {
+  transform: translateY(-0.5em);
 }
 
 .card {
@@ -45,7 +60,7 @@
 }
 
 .emptyrow {
-  height: 4vw;
+  height: 1em;
 }
 
 .cell {
