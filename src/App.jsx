@@ -31,10 +31,10 @@ function EmptyRow({ time }, { h }) {
     <>
       <tr class='emptyrow'>
         <td class='time'>{time}</td>
-        <EmptyCell cell={h + '1'}/>
-        <EmptyCell cell={h + '2'} />
-        <EmptyCell cell={h + '3'} />
-        <EmptyCell cell={h + '4'} />
+        <EmptyCell />
+        <EmptyCell />
+        <EmptyCell />
+        <EmptyCell />
       </tr>
     </>
   )
@@ -44,10 +44,10 @@ function HourRows({ hour }) {
 
   return (
     <>
-      <EmptyRow time={hour + ':00'} h={'c' + hour + '1'} />
-      <EmptyRow time='   15'        h={'c' + hour + '2'} />
-      <EmptyRow time='   30'        h={'c' + hour + '3'} />
-      <EmptyRow time='   45'        h={'c' + hour + '4'} />
+      <EmptyRow time={hour + ':00'} />
+      <EmptyRow time='   15'        />
+      <EmptyRow time='   30'        />
+      <EmptyRow time='   45'        />
     </>
   )
 }
@@ -56,12 +56,12 @@ function Timetable() {
   return (
     <>
       <table id='timetable'>
-        <tr>
-          <td> </td>
-          <td class='center'>1</td>
-          <td class='center'>2</td>
-          <td class='center'>3</td>
-          <td class='center'>4</td>
+        <tr class='fixed'>
+          <th> </th>
+          <th class='center'>1</th>
+          <th class='center'>2</th>
+          <th class='center'>3</th>
+          <th class='center'>4</th>
         </tr>
         <HourRows hour='08' />
         <HourRows hour='09' />
@@ -76,23 +76,14 @@ function Timetable() {
         <HourRows hour='18' />
         <HourRows hour='19' />
         <HourRows hour='20' />
-        <EmptyRow time='21:00' h={'c211'} />
       </table>
-    </>
-  )
-}
-
-function Option({ x }) {
-  return (
-    <>
-      <option value={x}>{x}</option>
     </>
   )
 }
 
 function HoursOption() {
   var options = []
-  for (var i = 8; i <= 20; i++) {
+  for (var i = 8; i <= 19; i++) {
     options.push(<option value={i}>{i}</option>);
   }
   return <select class='dropdown'>{options}</select>
