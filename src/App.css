@@ -76,3 +76,10 @@
 .timetable {
   position: absolute;
 }
+
+.c1711, .c1712, .c1713, .c1714,
+.c1721, .c1722, .c1723, .c1724,
+.c1731, .c1732, .c1733, .c1734,
+.c1741, .c1742, .c1743, .c1744 {
+  background-color: #4a4a4a;
+}

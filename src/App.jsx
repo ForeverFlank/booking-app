@@ -44,10 +44,10 @@ function HourRows({ hour }) {
 
   return (
     <>
-      <EmptyRow time={hour + ':00'} h={hour + '1'} />
-      <EmptyRow time='   15'        h={hour + '2'} />
-      <EmptyRow time='   30'        h={hour + '3'} />
-      <EmptyRow time='   45'        h={hour + '4'} />
+      <EmptyRow time={hour + ':00'} h={'c' + hour + '1'} />
+      <EmptyRow time='   15'        h={'c' + hour + '2'} />
+      <EmptyRow time='   30'        h={'c' + hour + '3'} />
+      <EmptyRow time='   45'        h={'c' + hour + '4'} />
     </>
   )
 }
@@ -67,6 +67,16 @@ function Timetable() {
         <HourRows hour='09' />
         <HourRows hour='10' />
         <HourRows hour='11' />
+        <HourRows hour='12' />
+        <HourRows hour='13' />
+        <HourRows hour='14' />
+        <HourRows hour='15' />
+        <HourRows hour='16' />
+        <HourRows hour='17' />
+        <HourRows hour='18' />
+        <HourRows hour='19' />
+        <HourRows hour='20' />
+        <EmptyRow time='21:00' h={'c211'} />
       </table>
     </>
   )
@@ -113,6 +123,10 @@ function InputMenu() {
         <HoursOption />
         <p class='colon'>:</p>
         <MinutesOption />
+      </div>
+      <div>
+        <br></br>
+        <button>Book</button>
       </div>
     </>
   )
